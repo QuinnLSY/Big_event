@@ -1,0 +1,27 @@
+# 配置数据库连接信息
+spring:
+  datasource:
+    # 数据库驱动类名
+    driverClassName: com.mysql.cj.jdbc.Driver
+    # 数据库连接URL
+    url: jdbc:mysql://localhost:3306/Big_event?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    # 数据库用户名
+    username: root
+    # 数据库密码
+    password: Cjxsmysql666
+  data:
+    # 配置Redis
+    redis:
+      # 配置Redis的连接信息
+      host: localhost
+      # 配置Redis的端口号
+      port: 6379
+
+# 配置MyBatis
+mybatis:
+  # 配置MyBatis的全局属性
+  configuration:
+    # 开启下划线到驼峰命名的映射，使得数据库中的_column风格的字段(create_time)能够与Java中的camelCase风格的属性名自动映射
+    map-underscore-to-camel-case: true
+    # 配置MyBatis的Mapper文件位置
+    mapper-locations: classpath:mapper/*.xml
