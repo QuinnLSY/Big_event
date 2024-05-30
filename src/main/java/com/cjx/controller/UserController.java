@@ -50,7 +50,7 @@ public class UserController {
         if (u == null) {
             // 用户名不存在，进行注册
             userService.register(username, password);
-            return Result.success();
+            return Result.success("注册成功！");
         } else {
             // 用户名已存在，返回失败信息
             return Result.fail("用户名已存在");
@@ -134,7 +134,7 @@ public class UserController {
         // 调用userService的updateAvatar方法，更新用户的头像URL
         userService.updateAvatar(avatarUrl);
         // 返回成功结果
-        return Result.success();
+        return Result.success("成功更新头像！");
     }
 
 
@@ -170,7 +170,7 @@ public class UserController {
                 userService.updatePassword(newPwd);
                 ValueOperations<String, String> ops = stringRedisTemplate.opsForValue();
                 ops.getOperations().delete(token);
-                return Result.success();
+                return Result.success("密码修改成功！");
             }
         } else {
             // 参数为空时返回失败结果
@@ -195,7 +195,7 @@ public class UserController {
         // 清除线程本地存储的用户信息
         ThreadLocalUtil.remove();
         // 返回登出成功的结果
-        return Result.success();
+        return Result.success("已成功登出！");
     }
 
 }

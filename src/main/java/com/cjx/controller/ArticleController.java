@@ -122,7 +122,7 @@ public class ArticleController {
             } else {
                 // 执行文章删除操作
                 articleService.delete(id);
-                return Result.success();
+                return Result.success("成功删除文章！");
             }
         }
     }
