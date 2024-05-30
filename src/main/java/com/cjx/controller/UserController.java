@@ -44,7 +44,7 @@ public class UserController {
      * @return 注册结果。如果注册成功，返回success；如果注册失败（如用户名已存在），返回fail及错误信息。
      */
     @PostMapping({"/register"})
-    public Result register(@Pattern(regexp = "^\\S{3,16}$") String username, @Pattern(regexp = "^\\S{3,16}$") String password) {
+    public Result register(@Pattern(regexp = "^\\S{1,16}$") String username, @Pattern(regexp = "^\\S{6,16}$") String password) {
         // 通过用户名查询用户是否存在
         User u = userService.findByUserName(username);
         if (u == null) {

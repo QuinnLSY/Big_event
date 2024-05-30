@@ -21,7 +21,7 @@ public class User {
 
 
     @NotEmpty
-    @Pattern(regexp = "^\\S{1,30}$")
+    @Pattern(regexp = "^\\S{1,16}$")
     private String nickname;//昵称
 
     @NotEmpty
