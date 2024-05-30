@@ -21,10 +21,10 @@
 
 # 获取文章列表
 - 在ArticleController中实现了list方法，返回List\<Article\>，返回的是数据库中的文章列表，<font face='黑体' color=#0f0 size=3>注意：这里返回的是数据库中的文章列表，而不是数据库中的文章实体</font>;
-## PageBean分页
+  ## PageBean分页
 1. 项目使用PageBean分页，返回PageBean\<Article\>，使文章列表以分页形式展现；
 2. 使用PageBean需要在pom.xml中引入pagehelper插件，并在pojo中引入PageBean类，定义分页样式;
-## 获取文章列表的sql语句
+  ## 获取文章列表的sql语句
 - 普通sql语句没有查询并返回信息列表的功能，需要借助相关语句配置完成：
   1. 在resources文件夹下创建与ArticleMapper.java同目录结构（目录使用com/cjx/mapper创建），同文件名的ArticleMapper·xml文件，配置sql语句;
   2. 在ArticleMapper.xml文件中添加`<mapper namespace="com.cjx.mapper.ArticleMapper">`映射到ArticleMapper.java;
