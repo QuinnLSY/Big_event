@@ -13,9 +13,9 @@ public class AliOssUtil {
     // OSS服务的Endpoint
     private static final String ENDPOINT = "https://oss-cn-shenzhen.aliyuncs.com";
     // OSS的访问密钥ID(见Mac电脑备忘录：阿里云文件存储oss）
-    private static final String ACCESS_KEY_ID = "LTAI5t7upqC7ucjN9sGSEUZE";
+    private static final String ACCESS_KEY_ID = "";
     // OSS的访问密钥秘钥
-    private static final String SECRET_ACCESS_KEY = "BS4dN8sCK19IYxrKBOexNaUhKsRhhT";
+    private static final String SECRET_ACCESS_KEY = "";
     // OSS的存储空间名称
     private static final String BUCKET_NAME = "big-event-lsy";
     /**
